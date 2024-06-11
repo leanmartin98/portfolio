@@ -14,9 +14,9 @@
       <div class="logo">Garcete Leandro</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">Sobre Mí</a></li>
-          <li><a href="#experience">Experiencias</a></li>
           <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#experience">Experiencias</a></li>
+          <li><a href="#about">Sobre Mí</a></li>
           <li><a href="#contact">Contacto</a></li>
           <li>
             <img 
@@ -39,9 +39,9 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">Sobre Mí</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experiencias</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Proyectos</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experiencias</a></li>
+          <li><a href="#about" onclick="toggleMenu()">Sobre Mí</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
           <li>
             <img 
@@ -94,51 +94,82 @@
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section_text_p1">Conoce Más</p>
-      <h1 class="title">Sobre Mí</h1>
-      <div class="section-container">
-        <div class="section_pic-container">
-          <img 
-          src="./assets/picture.png" 
-          alt="Profile picture"
-          class="about-pic">
-        </div>
-
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img 
-              src="./assets/experience.png" 
-              src-light="./assets/experience.png"
-              src-dark="./assets/experience_dark.png"
-              alt="Experience icon"
-              class="icon">
-              <h3>Experiencia</h3>
-              <p>1+ año<br>Websites<br>Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img 
-              src="./assets/education.png"
-              src-light="./assets/education.png" 
-              src-dark="./assets/education_dark.png" 
-              alt="Education icon"
-              class="icon">
-              <h3>Educación</h3>
-              <p>Certificación en HTML, CSS y JS<br>EDteam. <br>Autodidacta <br>Ingles A-2</p>
-            </div>
+    <section id="projects">
+      <p class="section_text_p1">Navega por mis recientes</p>
+      <h1 class="title">Proyectos</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img 
+            src="./assets/Halo-Infinite.jfif" 
+            alt="Project 1"
+            class="project-img">
           </div>
-          <div class="text-container">
-            <p>Hola, me llamo LEANDRO MARTIN GARCETE y soy Software Developer con un año y medio de experiencia en desarrollo web. Soy autodidacta y me involucro mucho en los proyectos en los que trabajo. Mis principales fuentes de aprendizaje son Google, StackOverflow, YouTube (tutoriales), libros como (Eloquent JavaScript) y ahora las "nuevas" IA. Hasta ahora, he desarrollado miniproyectos de sitios web, experiencias de usuario como carritos de compras, un sitio demo de Halo Infinity. En mi último proyecto, trabajé en el desarrollo de una nueva página web de automóviles deportivos (mi mayor hobby). La página debía ser fácil de usar atractiva para los usuarios y que sea de gran escala. Mis principales objetivos en esta apasionante y desafiante carrera son profundizar en todo lo relacionado con User Experience, Cloud Computing, DataBase y Blockchain.</p>
+          <h2 class="experience-sub-title project-title">Web Halo</h2>
+          <div class="btn-container">
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/leanmartin98/demo-sitio-halo/'">
+            Github
+          </button>
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://leo-sitio-halo-aeb91gn4b-leanmartin98.vercel.app'">
+            Demo
+          </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img 
+            src="./assets/descarga (5).jfif" 
+            alt="Project 2"
+            class="project-img">
+          </div>
+          <h2 class="experience-sub-title project-title">Deep Motors</h2>
+          <div class="btn-container">
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/leanmartin98/Deep-Motors/'">
+            Github
+          </button>
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/leanmartin98/Deep-Motors/'">
+            Demo
+          </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img 
+            src="./assets/background.jpg" 
+            alt="Project 3"
+            class="project-img">
+          </div>
+          <h2 class="experience-sub-title project-title">Website AI</h2>
+          <div class="btn-container">
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://github.com/leanmartin98/Page-AI-Spoiler'">
+            Github
+          </button>
+            <button 
+            class="btn btn-color-2 project-btn" 
+            onclick="location.href='https://page-ai-spoiler.vercel.app'">
+            Demo
+          </button>
           </div>
         </div>
       </div>
-      <img 
+      </div>
+      <img
       src="./assets/arrow.png"
       src-light="./assets/arrow.png"
       src-dark="./assets/arrow_dark.png"
-      alt="Arrow icon" 
-      class="icon arrow" 
+      alt="Arrow icon"
+      class="icon arrow"
       onclick="location.href='./#experience'">
     </section>
     <section id="experience">
@@ -284,63 +315,53 @@
       src-dark="./assets/arrow_dark.png"
       alt="Arrow icon" 
       class="icon arrow" 
-      onclick="location.href='./#projects'">
+      onclick="location.href='./#about'">
     </section>
-    <section id="projects">
-      <p class="section_text_p1">Navega por mis recientes</p>
-      <h1 class="title">Proyectos</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img 
-            src="./assets/Halo-Infinite.jfif" 
-            alt="Project 1"
-            class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Web Demo</h2>
-          <div class="btn-container">
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/leanmartin98/demo-sitio-halo/'">Github</button>
-          </div>
+    <section id="about">
+      <p class="section_text_p1">Conoce Más</p>
+      <h1 class="title">Sobre Mí</h1>
+      <div class="section-container">
+        <div class="section_pic-container">
+          <img 
+          src="./assets/picture.png" 
+          alt="Profile picture"
+          class="about-pic">
         </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img 
-            src="./assets/descarga (5).jfif" 
-            alt="Project 2"
-            class="project-img">
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img 
+              src="./assets/experience.png" 
+              src-light="./assets/experience.png"
+              src-dark="./assets/experience_dark.png"
+              alt="Experience icon"
+              class="icon">
+              <h3>Experiencia</h3>
+              <p>1+ año<br>Websites<br>Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img 
+              src="./assets/education.png"
+              src-light="./assets/education.png" 
+              src-dark="./assets/education_dark.png" 
+              alt="Education icon"
+              class="icon">
+              <h3>Educación</h3>
+              <p>Certificación en HTML, CSS y JS<br>EDteam. <br>Autodidacta <br>Ingles A-2</p>
+            </div>
           </div>
-          <h2 class="experience-sub-title project-title">Deep Motors</h2>
-          <div class="btn-container">
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/leanmartin98/Deep-Motors/'">Github</button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img 
-            src="./assets/project-3.png" 
-            alt="Project 3"
-            class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Project Tree</h2>
-          <div class="btn-container">
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/'">Github</button>
+          <div class="text-container">
+            <p>👋Hola, soy Software Developer con 3 años de experiencia en desarrollo web. 👨‍💻Soy autodidacta y me involucro mucho en los proyectos en los que trabajo. Mis principales fuentes de aprendizaje son Google, Udemy, YouTube (tutoriales🎬), libros como (Eloquent JavaScript📚) y ahora las "nuevas" IA. Hasta ahora, he desarrollado miniproyectos de sitios web, experiencias de usuario como carritos de compras, un sitio demo de Halo Infinity. En mi último proyecto, trabajé en el desarrollo de una nueva página web de automóviles deportivos (mi mayor hobby🚗). La página debía ser fácil de usar atractiva para los usuarios y que sea de gran escala. 🥇Mis principales objetivos en esta apasionante mundo IT son profundizar en todo lo relacionado con User Experience, Cloud Computing, DataBase y Blockchain. Quiero poder agregar valor a compañias para su crecimiento y escalabilidad quiero formar parte de un megaproyecto así poder crecer no solo en lo tecnico sino en lo personal y profesionalmente como persona, voy aplicando conocimientos con mucha ilusión y paciencia💪.</p>
           </div>
         </div>
       </div>
-      </div>
-      <img
+      <img 
       src="./assets/arrow.png"
       src-light="./assets/arrow.png"
       src-dark="./assets/arrow_dark.png"
-      alt="Arrow icon"
-      class="icon arrow"
+      alt="Arrow icon" 
+      class="icon arrow" 
       onclick="location.href='./#contact'">
     </section>
     <section id="contact">
@@ -373,9 +394,9 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#experience">Experiencias</a></li>
             <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#experience">Experiencias</a></li>
+            <li><a href="#about">Sobre Mí</a></li>
             <li><a href="#contact">Contacto</a></li>
           </ul>
         </div>
