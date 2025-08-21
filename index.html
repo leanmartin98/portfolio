@@ -10,14 +10,21 @@
     <link rel="icon" href="assets/favicon.png">
   </head>
   <body>
+    <div class="language-toggle">
+      <button class="lang-btn active" onclick="changeLanguage('en')" data-lang="en">EN</button>
+      <button class="lang-btn" onclick="changeLanguage('es')" data-lang="es">ES</button>
+    </div>
+    <div class="content-wrapper" id="contentWrapper">
     <nav id="desktop-nav">
-      <div class="logo">Garcete Leandro</div>
+      <a href="#profile" class="logo-link">
+        <div class="logo">Garcete Leandro</div>
+      </a>
       <div>
         <ul class="nav-links">
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#experience">Experiencias</a></li>
-          <li><a href="#about">Sobre Mí</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#projects" data-translate="nav-projects">Projects</a></li>
+          <li><a href="#experience" data-translate="nav-experience">Experience</a></li>
+          <li><a href="#about" data-translate="nav-about">About Me</a></li>
+          <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
           <li>
             <img 
             id="modeToggle"
@@ -39,10 +46,10 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#projects" onclick="toggleMenu()">Proyectos</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experiencias</a></li>
-          <li><a href="#about" onclick="toggleMenu()">Sobre Mí</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contacto</a></li>
+          <li><a href="#projects" onclick="toggleMenu()" data-translate="nav-projects">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()" data-translate="nav-experience">Experience</a></li>
+          <li><a href="#about" onclick="toggleMenu()" data-translate="nav-about">About Me</a></li>
+          <li><a href="#contact" onclick="toggleMenu()" data-translate="nav-contact">Contact</a></li>
           <li>
             <img 
             id="modeToggle2"
@@ -60,18 +67,19 @@
         <img src="./assets/logo_transparent.png" alt="Spoiler profile picture"/>
       </div>
       <div class="section_text">
-        <p class="section_text_p1">Hola, Soy</p>
+        <p class="section_text_p1" data-translate="profile-greeting">Hi, I'm</p>
         <h1 class="title">Garcete Leandro</h1>
-        <p class="section_text_p2">Frontend Developer ⛏</p>
+        <p class="section_text_p2" data-translate="profile-role">Frontend Developer ⛏</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/Garcete-PortfolioCV.pdf')"
+            data-translate="btn-download-cv"
           >
-            Descargar CV
+            Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contacto Info
+          <button class="btn btn-color-1" onclick="location.href='./#contact'" data-translate="btn-contact">
+            Contact Info
           </button>
         </div>
         <div id="socials-container">
@@ -94,10 +102,9 @@
         </div>
       </div>
     </section>
-
     <section id="projects">
-      <p class="section_text_p1">Navega por mis recientes</p>
-      <h1 class="title">Proyectos</h1>
+      <p class="section_text_p1" data-translate="projects-subtitle">Browse my recent</p>
+      <h1 class="title" data-translate="projects-title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
         <div class="details-container color-container">
@@ -174,12 +181,12 @@
       onclick="location.href='./#experience'">
     </section>
     <section id="experience">
-      <p class="section_text_p1">Explora Mí</p>
-      <h1 class="title">Experiencia</h1>
+      <p class="section_text_p1" data-translate="experience-subtitle">Explore My</p>
+      <h1 class="title" data-translate="experience-title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
+          <h2 class="experience-sub-title" data-translate="frontend-title">Frontend Development</h2>
           <div class="article-container">
           <article>
           <img 
@@ -190,19 +197,7 @@
           class="icon">
           <div>
           <h3>HTML</h3>
-          <p>Intermediate</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png" 
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png"
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>SASS</h3>
-          <p>Intermediate</p>
+          <p data-translate="skill-advanced">Advanced</p>
           </div>
           </article>
           <article>
@@ -214,7 +209,7 @@
           class="icon">
           <div>
           <h3>CSS</h3>
-          <p>Intermediate</p>
+          <p data-translate="skill-advanced">Advanced</p>
           </div>
           </article>
           <article>
@@ -226,7 +221,19 @@
           class="icon">
           <div>
           <h3>JavaScript</h3>
-          <p>Intermediate</p>
+          <p data-translate="skill-advanced">Advanced</p>
+          </div>
+          </article>
+          <article>
+          <img 
+          src="./assets/checkmark.png" 
+          src-light="./assets/checkmark.png"
+          src-dark="./assets/checkmark_dark.png"
+          alt="Experience icon" 
+          class="icon">
+          <div>
+          <h3>React</h3>
+          <p data-translate="skill-intermediate">Intermediate</p>
           </div>
           </article>
           <article>
@@ -238,7 +245,7 @@
           class="icon">
           <div>
           <h3>TypeScript</h3>
-          <p>Basic</p>
+          <p data-translate="skill-beginner">Beginner</p>
           </div>
           </article>
           <article>
@@ -249,14 +256,14 @@
           alt="Experience icon" 
           class="icon">
           <div>
-          <h3>Bootstrap</h3>
-          <p>Basic</p>
+          <h3>Angular</h3>
+          <p data-translate="skill-intermediate">Intermediate</p>
           </div>
           </article>
           </div>
           </div>
           <div class="details-container">
-          <h2 class="experience-sub-title">Backend Development</h2>
+          <h2 class="experience-sub-title" data-translate="backend-title">Backend Development</h2>
           <div class="article-container">
           <article>
           <img 
@@ -266,8 +273,8 @@
           alt="Experience icon" 
           class="icon">
           <div>
-          <h3>PostgreSQL</h3>
-          <p>Intermediate</p>
+          <h3>PHP</h3>
+          <p data-translate="skill-beginner">Beginner</p>
           </div>
           </article>
           <article>
@@ -279,7 +286,7 @@
           class="icon">
           <div>
           <h3>Node JS</h3>
-          <p>Intermediate</p>
+          <p data-translate="skill-intermediate">Intermediate</p>
           </div>
           </article>
           <article>
@@ -290,8 +297,8 @@
           alt="Experience icon" 
           class="icon">
           <div>
-          <h3>Express JS</h3>
-          <p>Intermediate</p>
+          <h3>Python</h3>
+          <p data-translate="skill-beginner">Beginner</p>
           </div>
           </article>
           <article>
@@ -302,8 +309,32 @@
           alt="Experience icon" 
           class="icon">
           <div>
-          <h3>Git</h3>
-          <p>Intermediate</p>
+          <h3>MongoDB</h3>
+          <p data-translate="skill-beginner">Beginner</p>
+          </div>
+          </article>
+          <article>
+          <img 
+          src="./assets/checkmark.png"
+          src-light="./assets/checkmark.png"
+          src-dark="./assets/checkmark_dark.png" 
+          alt="Experience icon" 
+          class="icon">
+          <div>
+          <h3>Java</h3>
+          <p data-translate="skill-beginner">Beginner</p>
+          </div>
+          </article>
+          <article>
+          <img 
+          src="./assets/checkmark.png"
+          src-light="./assets/checkmark.png"
+          src-dark="./assets/checkmark_dark.png" 
+          alt="Experience icon" 
+          class="icon">
+          <div>
+          <h3>PostgreSQL</h3>
+          <p data-translate="skill-beginner">Beginner</p>
           </div>
           </article>
           </div>
@@ -315,12 +346,12 @@
       src-light="./assets/arrow.png"
       src-dark="./assets/arrow_dark.png"
       alt="Arrow icon" 
-      class="icon arrow" 
+      class="icon arrow"
       onclick="location.href='./#about'">
     </section>
     <section id="about">
-      <p class="section_text_p1">Conoce Más</p>
-      <h1 class="title">Sobre Mí</h1>
+      <p class="section_text_p1" data-translate="about-subtitle">Learn more</p>
+      <h1 class="title" data-translate="about-title">About Me</h1>
       <div class="section-container">
         <div class="section_pic-container">
           <img 
@@ -338,8 +369,8 @@
               src-dark="./assets/experience_dark.png"
               alt="Experience icon"
               class="icon">
-              <h3>Experiencia</h3>
-              <p>1+ año<br>Websites<br>Frontend Development</p>
+              <h3 data-translate="about-exp-title">Experience</h3>
+              <p data-translate="about-exp-desc">3+ año<br>Websites<br>Frontend Development</p>
             </div>
             <div class="details-container">
               <img 
@@ -348,12 +379,14 @@
               src-dark="./assets/education_dark.png" 
               alt="Education icon"
               class="icon">
-              <h3>Educación</h3>
-              <p>Certificación en HTML, CSS y JS<br>EDteam. <br>Autodidacta <br>Ingles A-2</p>
+              <h3 data-translate="about-edu-title">Education</h3>
+              <p data-translate="about-edu-desc">Certification in HTML, CSS y JS<br>EDteam. <br>Self-taught <br>English A-2</p>
             </div>
           </div>
           <div class="text-container">
-            <p>👋Hola, soy Software Developer con 3 años de experiencia en desarrollo web. 👨‍💻Soy autodidacta y me involucro mucho en los proyectos en los que trabajo. Mis principales fuentes de aprendizaje son Google, Udemy, YouTube (tutoriales🎬), libros como (Eloquent JavaScript📚) y ahora las "nuevas" IA. Hasta ahora, he desarrollado miniproyectos de sitios web, experiencias de usuario como carritos de compras, un sitio demo de Halo Infinity. En mi último proyecto, trabajé en el desarrollo de una nueva página web de automóviles deportivos (mi mayor hobby🚗). La página debía ser fácil de usar atractiva para los usuarios y que sea de gran escala. 🥇Mis principales objetivos en esta apasionante mundo IT son profundizar en todo lo relacionado con User Experience, Cloud Computing, DataBase y Blockchain. Quiero poder agregar valor a compañias para su crecimiento y escalabilidad quiero formar parte de un megaproyecto así poder crecer no solo en lo tecnico sino en lo personal y profesionalmente como persona, voy aplicando conocimientos con mucha ilusión y paciencia💪.</p>
+            <p data-translate="about-description">I'm a Software Developer with 3 years of experience in building websites, driven by curiosity and a passion for creating things that solve problems and bring both impact and satisfaction. I'm self-taught, and I've learned through Google marathons, Udemy courses, YouTube tutorials 🎬, timeless resources like Eloquent JavaScript 📚, and lately, by exploring the world of AI.
+            <br>
+             Along the way, I've built all kinds of projects from fun shopping cart UX experiments to a Halo Infinite demo site. My most recent one? An E-commerce website. I focused on making it sleek, easy to use, and ready to grow.</p>
           </div>
         </div>
       </div>
@@ -366,8 +399,8 @@
       onclick="location.href='./#contact'">
     </section>
     <section id="contact">
-      <p class="section_text_p1">Ponte en marcha</p>
-      <h1 class="title">Contactame</h1>
+      <p class="section_text_p1" data-translate="contact-subtitle">I'm available for consultations</p>
+      <h1 class="title" data-translate="contact-title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img 
@@ -395,15 +428,16 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#experience">Experiencias</a></li>
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#projects" data-translate="nav-projects">Projects</a></li>
+            <li><a href="#experience" data-translate="nav-experience">Experience</a></li>
+            <li><a href="#about" data-translate="nav-about">About Me</a></li>
+            <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2025 My Portfolio | Made with love🧡</p>
+      <p data-translate="footer-text">2025 My Portfolio | Made with love🧡</p>
     </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
