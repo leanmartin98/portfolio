@@ -1,442 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mí Portafolio</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="mediaqueries.css"/>
-    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" href="assets/favicon.png" />
   </head>
   <body>
     <div class="language-toggle">
-      <button class="lang-btn active" onclick="changeLanguage('en')" data-lang="en">EN</button>
-      <button class="lang-btn" onclick="changeLanguage('es')" data-lang="es">ES</button>
+      <button
+        class="lang-btn active"
+        onclick="changeLanguage('en')"
+        data-lang="en"
+      >
+        EN
+      </button>
+      <button class="lang-btn" onclick="changeLanguage('es')" data-lang="es">
+        ES
+      </button>
     </div>
     <div class="content-wrapper" id="contentWrapper">
-    <nav id="desktop-nav">
-      <a href="#profile" class="logo-link">
-        <div class="logo">Garcete Leandro</div>
-      </a>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#projects" data-translate="nav-projects">Projects</a></li>
-          <li><a href="#experience" data-translate="nav-experience">Experience</a></li>
-          <li><a href="#about" data-translate="nav-about">About Me</a></li>
-          <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
-          <li>
-            <img 
-            id="modeToggle"
-            class="icon color-icon"
-            src="./assets/theme_light.png" 
-            src-light="./assets/theme_light.png"
-            src-dark="./assets/theme_dark.png"
-            alt="Color them icon">
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Garcete Leandro</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#projects" onclick="toggleMenu()" data-translate="nav-projects">Projects</a></li>
-          <li><a href="#experience" onclick="toggleMenu()" data-translate="nav-experience">Experience</a></li>
-          <li><a href="#about" onclick="toggleMenu()" data-translate="nav-about">About Me</a></li>
-          <li><a href="#contact" onclick="toggleMenu()" data-translate="nav-contact">Contact</a></li>
-          <li>
-            <img 
-            id="modeToggle2"
-            class="icon color-icon"
-            src="./assets/theme_light.png" 
-            src-light="./assets/theme_light.png"
-            src-dark="./assets/theme_dark.png"
-            alt="Color them icon">
-          </li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section_pic-container">
-        <img src="./assets/logo_transparent.png" alt="Spoiler profile picture"/>
-      </div>
-      <div class="section_text">
-        <p class="section_text_p1" data-translate="profile-greeting">Hi, I'm</p>
-        <h1 class="title">Garcete Leandro</h1>
-        <p class="section_text_p2" data-translate="profile-role">Frontend Developer ⛏</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Garcete-PortfolioCV.pdf')"
-            data-translate="btn-download-cv"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'" data-translate="btn-contact">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-          src="./assets/linkedin.png"
-          src-light="./assets/linkedin.png"
-          src-dark="./assets/linkedin_dark.png"
-          alt="My LinkedIn profile"
-          class="icon linkedin-icon"
-          onclick="location.href='https://linkedin.com/in/leandro-garcete-23216b251/'"
-          />
-          <img
-          src="./assets/github.png"
-          src-light="./assets/github.png"
-          src-dark="./assets/github_dark.png"
-          alt="My github profile"
-          class="icon github-icon"
-          onclick="location.href='https://github.com/leanmartin98'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="projects">
-      <p class="section_text_p1" data-translate="projects-subtitle">Browse my recent</p>
-      <h1 class="title" data-translate="projects-title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img 
-            src="./assets/Halo-Infinite.jfif" 
-            alt="Project 1"
-            class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Web Halo</h2>
-          <div class="btn-container">
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/leanmartin98/demo-sitio-halo/'">
-            Github
-          </button>
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://leo-sitio-halo-aeb91gn4b-leanmartin98.vercel.app'">
-            Demo
-          </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img 
-            src="./assets/descarga (5).jfif" 
-            alt="Project 2"
-            class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Deep Motors</h2>
-          <div class="btn-container">
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/leanmartin98/Deep-Motors/'">
-            Github
-          </button>
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/leanmartin98/Deep-Motors/'">
-            Demo
-          </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img 
-            src="./assets/background.jpg" 
-            alt="Project 3"
-            class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Website AI</h2>
-          <div class="btn-container">
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://github.com/leanmartin98/Page-AI-Spoiler'">
-            Github
-          </button>
-            <button 
-            class="btn btn-color-2 project-btn" 
-            onclick="location.href='https://page-ai-spoiler.vercel.app'">
-            Demo
-          </button>
-          </div>
-        </div>
-      </div>
-      </div>
-      <img
-      src="./assets/arrow.png"
-      src-light="./assets/arrow.png"
-      src-dark="./assets/arrow_dark.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#experience'">
-    </section>
-    <section id="experience">
-      <p class="section_text_p1" data-translate="experience-subtitle">Explore My</p>
-      <h1 class="title" data-translate="experience-title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-          <h2 class="experience-sub-title" data-translate="frontend-title">Frontend Development</h2>
-          <div class="article-container">
-          <article>
-          <img 
-          src="./assets/checkmark.png" 
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png"
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>HTML</h3>
-          <p data-translate="skill-advanced">Advanced</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png" 
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png"
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>CSS</h3>
-          <p data-translate="skill-advanced">Advanced</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png" 
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png"
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>JavaScript</h3>
-          <p data-translate="skill-advanced">Advanced</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png" 
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png"
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>React</h3>
-          <p data-translate="skill-intermediate">Intermediate</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png" 
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>TypeScript</h3>
-          <p data-translate="skill-beginner">Beginner</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png" 
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>Angular</h3>
-          <p data-translate="skill-intermediate">Intermediate</p>
-          </div>
-          </article>
-          </div>
-          </div>
-          <div class="details-container">
-          <h2 class="experience-sub-title" data-translate="backend-title">Backend Development</h2>
-          <div class="article-container">
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png"
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>PHP</h3>
-          <p data-translate="skill-beginner">Beginner</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png" 
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>Node JS</h3>
-          <p data-translate="skill-intermediate">Intermediate</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png"
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>Python</h3>
-          <p data-translate="skill-beginner">Beginner</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png" 
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>MongoDB</h3>
-          <p data-translate="skill-beginner">Beginner</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png" 
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>Java</h3>
-          <p data-translate="skill-beginner">Beginner</p>
-          </div>
-          </article>
-          <article>
-          <img 
-          src="./assets/checkmark.png"
-          src-light="./assets/checkmark.png"
-          src-dark="./assets/checkmark_dark.png" 
-          alt="Experience icon" 
-          class="icon">
-          <div>
-          <h3>PostgreSQL</h3>
-          <p data-translate="skill-beginner">Beginner</p>
-          </div>
-          </article>
-          </div>
-          </div>
-          </div>
-          </div>
-      <img 
-      src="./assets/arrow.png"
-      src-light="./assets/arrow.png"
-      src-dark="./assets/arrow_dark.png"
-      alt="Arrow icon" 
-      class="icon arrow"
-      onclick="location.href='./#about'">
-    </section>
-    <section id="about">
-      <p class="section_text_p1" data-translate="about-subtitle">Learn more</p>
-      <h1 class="title" data-translate="about-title">About Me</h1>
-      <div class="section-container">
-        <div class="section_pic-container">
-          <img 
-          src="./assets/picture.png" 
-          alt="Profile picture"
-          class="about-pic">
-        </div>
-
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img 
-              src="./assets/experience.png" 
-              src-light="./assets/experience.png"
-              src-dark="./assets/experience_dark.png"
-              alt="Experience icon"
-              class="icon">
-              <h3 data-translate="about-exp-title">Experience</h3>
-              <p data-translate="about-exp-desc">3+ año<br>Websites<br>Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img 
-              src="./assets/education.png"
-              src-light="./assets/education.png" 
-              src-dark="./assets/education_dark.png" 
-              alt="Education icon"
-              class="icon">
-              <h3 data-translate="about-edu-title">Education</h3>
-              <p data-translate="about-edu-desc">Certification in HTML, CSS y JS<br>EDteam. <br>Self-taught <br>English A-2</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p data-translate="about-description">I'm a Software Developer with 3 years of experience in building websites, driven by curiosity and a passion for creating things that solve problems and bring both impact and satisfaction. I'm self-taught, and I've learned through Google marathons, Udemy courses, YouTube tutorials 🎬, timeless resources like Eloquent JavaScript 📚, and lately, by exploring the world of AI.
-            <br>
-             Along the way, I've built all kinds of projects from fun shopping cart UX experiments to a Halo Infinite demo site. My most recent one? An E-commerce website. I focused on making it sleek, easy to use, and ready to grow.</p>
-          </div>
-        </div>
-      </div>
-      <img 
-      src="./assets/arrow.png"
-      src-light="./assets/arrow.png"
-      src-dark="./assets/arrow_dark.png"
-      alt="Arrow icon" 
-      class="icon arrow" 
-      onclick="location.href='./#contact'">
-    </section>
-    <section id="contact">
-      <p class="section_text_p1" data-translate="contact-subtitle">I'm available for consultations</p>
-      <h1 class="title" data-translate="contact-title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img 
-          src="./assets/email.png"
-          src-light="./assets/email.png"
-          src-dark="./assets/email_dark.png" 
-          alt="Email icon"
-          class="icon contact-icon">
-          <p><a href="mailto:garcetemartin908@gmail.com">garcetemartin908@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img 
-          src="./assets/linkedin.png"
-          src-light="./assets/linkedin.png"
-          src-dark="./assets/linkedin_dark.png"
-          alt="My LinkedIn profile"
-          class="icon linkedin-icon"
-          onclick="location.href='https://linkedin.com/in/leandro-garcete-23216b251/'"
-        />
-          <p><a href="https://www.linkedin.com/in/leandro-garcete-23216b251/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
+      <nav id="desktop-nav">
+        <a href="#profile" class="logo-link">
+          <div class="logo">Garcete Leandro</div>
+        </a>
+        <div>
           <ul class="nav-links">
-            <li><a href="#projects" data-translate="nav-projects">Projects</a></li>
-            <li><a href="#experience" data-translate="nav-experience">Experience</a></li>
+            <li>
+              <a href="#projects" data-translate="nav-projects">Projects</a>
+            </li>
+            <li>
+              <a href="#experience" data-translate="nav-experience"
+                >Experience</a
+              >
+            </li>
             <li><a href="#about" data-translate="nav-about">About Me</a></li>
             <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
+            <li>
+              <img
+                id="modeToggle"
+                class="icon color-icon"
+                src="./assets/theme_light.png"
+                src-light="./assets/theme_light.png"
+                src-dark="./assets/theme_dark.png"
+                alt="Color them icon"
+              />
+            </li>
           </ul>
         </div>
       </nav>
-      <p data-translate="footer-text">2025 My Portfolio | Made with love🧡</p>
-    </footer>
+      <nav id="hamburger-nav">
+        <div class="logo">Garcete Leandro</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li>
+              <a
+                href="#projects"
+                onclick="toggleMenu()"
+                data-translate="nav-projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                onclick="toggleMenu()"
+                data-translate="nav-experience"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="#about" onclick="toggleMenu()" data-translate="nav-about"
+                >About Me</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                onclick="toggleMenu()"
+                data-translate="nav-contact"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <img
+                id="modeToggle2"
+                class="icon color-icon"
+                src="./assets/theme_light.png"
+                src-light="./assets/theme_light.png"
+                src-dark="./assets/theme_dark.png"
+                alt="Color them icon"
+              />
+            </li>
+          </div>
+        </div>
+      </nav>
+      <section id="profile">
+        <div class="section_pic-container">
+          <img
+            src="./assets/logo_transparent.png"
+            alt="Spoiler profile picture"
+          />
+        </div>
+        <div class="section_text">
+          <p class="section_text_p1" data-translate="profile-greeting">
+            Hi, I'm
+          </p>
+          <h1 class="title">Garcete Leandro</h1>
+          <p class="section_text_p2" data-translate="profile-role">
+            Frontend Developer ⛏
+          </p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./assets/Garcete-PortfolioCV.pdf')"
+              data-translate="btn-download-cv"
+            >
+              Download CV
+            </button>
+            <button
+              class="btn btn-color-1"
+              onclick="location.href='./#contact'"
+              data-translate="btn-contact"
+            >
+              Contact Info
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              src-light="./assets/linkedin.png"
+              src-dark="./assets/linkedin_dark.png"
+              alt="My LinkedIn profile"
+              class="icon linkedin-icon"
+              onclick="location.href='https://linkedin.com/in/leandro-garcete-23216b251/'"
+            />
+            <img
+              src="./assets/github.png"
+              src-light="./assets/github.png"
+              src-dark="./assets/github_dark.png"
+              alt="My github profile"
+              class="icon github-icon"
+              onclick="location.href='https://github.com/leanmartin98'"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <p class="section_text_p1" data-translate="projects-subtitle">
+          Browse my recent
+        </p>
+        <h1 class="title" data-translate="projects-title">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/Halo-Infinite.jfif"
+                  alt="Project 1"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Web Halo</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/leanmartin98/demo-sitio-halo/'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://leo-sitio-halo-aeb91gn4b-leanmartin98.vercel.app'"
+                >
+                  Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/descarga (5).jfif"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Deep Motors</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/leanmartin98/Deep-Motors/'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/leanmartin98/Deep-Motors/'"
+                >
+                  Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/background.jpg"
+                  alt="Project 3"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Website AI</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/leanmartin98/Page-AI-Spoiler'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://page-ai-spoiler.vercel.app'"
+                >
+                  Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/cyber-monday-shopping.avif"
+                  alt="Project 4"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Ecommerce</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://https://github.com/leanmartin98/depoteek/'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://https://depoteek.vercel.app/'"
+                >
+                  Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          src-light="./assets/arrow.png"
+          src-dark="./assets/arrow_dark.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        />
+      </section>
+      <section id="experience">
+        <p class="section_text_p1" data-translate="experience-subtitle">
+          Explore My
+        </p>
+        <h1 class="title" data-translate="experience-title">Experience</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-translate="frontend-title">
+                Frontend Development
+              </h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    <p data-translate="skill-advanced">Advanced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    <p data-translate="skill-advanced">Advanced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p data-translate="skill-advanced">Advanced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>React</h3>
+                    <p data-translate="skill-intermediate">Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>TypeScript</h3>
+                    <p data-translate="skill-beginner">Beginner</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Angular</h3>
+                    <p data-translate="skill-intermediate">Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title" data-translate="backend-title">
+                Backend Development
+              </h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>PHP</h3>
+                    <p data-translate="skill-beginner">Beginner</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Node JS</h3>
+                    <p data-translate="skill-intermediate">Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Python</h3>
+                    <p data-translate="skill-beginner">Beginner</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>MongoDB</h3>
+                    <p data-translate="skill-beginner">Beginner</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Java</h3>
+                    <p data-translate="skill-beginner">Beginner</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    src-light="./assets/checkmark.png"
+                    src-dark="./assets/checkmark_dark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <p data-translate="skill-beginner">Beginner</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          src-light="./assets/arrow.png"
+          src-dark="./assets/arrow_dark.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#about'"
+        />
+      </section>
+      <section id="about">
+        <p class="section_text_p1" data-translate="about-subtitle">
+          Learn more
+        </p>
+        <h1 class="title" data-translate="about-title">About Me</h1>
+        <div class="section-container">
+          <div class="section_pic-container">
+            <img
+              src="./assets/picture.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  src-light="./assets/experience.png"
+                  src-dark="./assets/experience_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <h3 data-translate="about-exp-title">Experience</h3>
+                <p data-translate="about-exp-desc">
+                  3+ año<br />Websites<br />Frontend Development
+                </p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  src-light="./assets/education.png"
+                  src-dark="./assets/education_dark.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3 data-translate="about-edu-title">Education</h3>
+                <p data-translate="about-edu-desc">
+                  Certification in HTML, CSS y JS<br />EDteam. <br />Self-taught
+                  <br />English A-2
+                </p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p data-translate="about-description">
+                I'm a Software Developer with 3 years of experience in building
+                websites, driven by curiosity and a passion for creating things
+                that solve problems and bring both impact and satisfaction. I'm
+                self-taught, and I've learned through Google marathons, Udemy
+                courses, YouTube tutorials 🎬, timeless resources like Eloquent
+                JavaScript 📚, and lately, by exploring the world of AI.
+                <br />
+                Along the way, I've built all kinds of projects from fun
+                shopping cart UX experiments to a Halo Infinite demo site. My
+                most recent one? An E-commerce website. I focused on making it
+                sleek, easy to use, and ready to grow.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          src-light="./assets/arrow.png"
+          src-dark="./assets/arrow_dark.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+        />
+      </section>
+      <section id="contact">
+        <p class="section_text_p1" data-translate="contact-subtitle">
+          I'm available for consultations
+        </p>
+        <h1 class="title" data-translate="contact-title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              src-light="./assets/email.png"
+              src-dark="./assets/email_dark.png"
+              alt="Email icon"
+              class="icon contact-icon"
+            />
+            <p>
+              <a href="mailto:garcetemartin908@gmail.com"
+                >garcetemartin908@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              src-light="./assets/linkedin.png"
+              src-dark="./assets/linkedin_dark.png"
+              alt="My LinkedIn profile"
+              class="icon linkedin-icon"
+              onclick="location.href='https://linkedin.com/in/leandro-garcete-23216b251/'"
+            />
+            <p>
+              <a href="https://www.linkedin.com/in/leandro-garcete-23216b251/"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li>
+                <a href="#projects" data-translate="nav-projects">Projects</a>
+              </li>
+              <li>
+                <a href="#experience" data-translate="nav-experience"
+                  >Experience</a
+                >
+              </li>
+              <li><a href="#about" data-translate="nav-about">About Me</a></li>
+              <li>
+                <a href="#contact" data-translate="nav-contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <p data-translate="footer-text">2025 My Portfolio | Made with love🧡</p>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>
